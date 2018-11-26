@@ -1,1 +1,30 @@
 @import '~bootstrap/scss/bootstrap';
+html {
+    background-color: black;
+    color: white;
+}
+
+head {
+    background-color: black;
+    color: white;
+}
+body {
+    background-color: black;
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+.jumbotron {
+    background-color: rgb(188, 3, 43);
+}
+
+// .btn-space .btn-group-lg {
+//     margin-right: 50px;
+// }
+
+.page-header {
+    text-align: center;
+}
