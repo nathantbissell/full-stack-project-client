@@ -1,5 +1,5 @@
-const config = require('config.js')
-const store = require('../store.js')
+const config = require('./config.js')
+const store = require('./store.js')
 const baseUrl = config.apiUrl
 
 const signUp = data => {
@@ -14,7 +14,7 @@ const signIn = data => {
 return $.ajax({
     url: baseUrl + '/sign-in',
     method: 'POST',
-    data
+    data: data
 })
 }
 
@@ -26,17 +26,6 @@ return $.ajax({
     Authorization: 'Token token=' + store.user.token
     },
     data: data
-})
-}
-
-const createGame = function () {
-return $.ajax({
-    url: baseUrl + '/games',
-    method: 'POST',
-    headers: {
-    Authorization: 'Token token=' + store.user.token
-    },
-    data: {}
 })
 }
 

@@ -13,6 +13,9 @@ body {
     color: white;
 }
 
+h2 {
+    padding-bottom: 50px;
+}
 p {
     color: white;
 }
@@ -29,4 +32,14 @@ p {
     text-align: center;
     margin: 10px;
     padding: 20px;
+}
+.sign-up {
+    display: none;
+}
+.log-in {
+    display: none;
+}
+
+#second {
+    background-color: rgb(102,153,194)   
 }

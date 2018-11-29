@@ -3,96 +3,85 @@
     <head>
       <title>Example</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-
-      <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
-      <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <div class="container">
-
-      <div class="row">
-      
-      <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <h4> Column 1</h4>
-      </div>
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <h4> Column 2</h4>
-      </div>
-      if one of these is oversized/out of sync
-      create div class="clearfix visible-sm" to remedy -->
-      <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <h4> Column 3</h4>
-      </div>
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <h4> Column 4</h4>
-      </div></div></div> -->
-
-      <div class="container">
 
       <div class="page-header">
         <h1>Sneaker Spot</h1>
 
       <div class="jumbotron">
+      
         <!-- enlarges fonts, put everything inside of a grey box w/rounded corners
         if jumbo used outside of container will fill the total width of the screen. -->
           <p>Forget your sneaker closet at home? No worries! With Sneaker Spot you can show off
             your newest (or vintage) sneakers via this web interface! You can add sneakers, create a wishlist, 
             or even check to see if your local retailers have them available!
           </p>
-
-          <p>
-            <!-- <a href='#' class="btn btn-default btn-lg" role="button">More Info</a> -->
-            <!-- <input type="button" value="Info" class="btn btn-info"> -->
-            
-
-            <!-- <div class="btn-group btn-group-lg" role="group">
-              <button type="button" class="btn btn-default">small</button>
-              <button type="button" class="btn btn-default">Medium</button>
-              <button type="button" class="btn btn-default">LARGE</button>
-            </div> -->
-
-          </p>
       </div>
-      <div class="btn-space btn-group-lg" role="group">
-          <button type="submit" class="btn btn-dark" role="button">Log In</button>
+      <div class="btn-space btn-group-lg">
+          <button type="submit" id='btn-login' class="btn btn-dark">Log In</button>
 
-          <button type="submit" class="btn btn-danger" role="button">Sign Up</button>
+          <button type="submit" id='btn-signup' class="btn btn-danger">Sign Up</button>
           
-          <button type="submit" class="btn btn-dark" role="button">About</button>
+          <button type="submit" id='about' class="btn btn-dark">About</button>
           </div>
       
-          <form class="sign-up">
+          <form class="sign-up" id="signUpFormModal" role="form">
               <div class="form-group">
                   <h2>Sign Up</h2>
+                
                 <label for="input">Email address</label>
-                <input type="email" class="form-control" id="signup" aria-describedby="emailHelp" placeholder="Enter email">
+                <input type="text" class="form-control" name="credentials[email]" placeholder="Enter email">
                 <small id="emailHelp" class="form-text text-muted">By creating an account, you automatically accept our terms and conditions</small>
               </div>
+              
               <div class="form-group">
                 <label for="input">Password</label>
-                <input type="password" class="form-control" id="signup" placeholder="Password">
+                <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+              </div>
+              
+              <div class="form-group">
+                <label for="input">Confirm Password</label>
+                <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Password">
               </div>
               <button type="submit" class="btn btn-danger btn-lg" role="button">Submit</button>
           </form>
 
-          <form class="sign-in">
+          <form class="log-in" id="signInFormModal" role="form">
               <div class="form-group">
               <h2>Sign In</h2>
                 <label for="input">Email address</label>
-                <input type="email" class="form-control" id="signin" aria-describedby="emailHelp" placeholder="Enter email">
+                <input type="text" class="form-control" name="credentials[email]" placeholder="Enter email">
                 <small id="emailHelp" class="form-text text-muted">Please Sign In</small>
               </div>
               <div class="form-group">
                 <label for="input">Password</label>
-                <input type="password" class="form-control" id="signin" placeholder="Password">
+                <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
               </div>
               <button type="submit" class="btn btn-danger btn-lg" role="button">Submit</button>
           </form>
+          <small id= "smallMessage" class="text-muted"></small>
+      
+      
+      <div id= "second" class="jumbotron">
+        <h2>Welcome! What would you like to do today?</h2>
+        <div class="btn-space btn-group-lg">
+            <button type="submit" id='btn-add' class="btn btn-light">Add Shoe</button>
+  
+            <button type="submit" id='btn-remove' class="btn btn-dark">Remove Shoe</button>
+            
+            <button type="submit" id='settings' class="btn btn-light">Settings</button>
+            </div>
       </div>
+
       </div>
+
+
+
+
+
     </body>
 </html>
