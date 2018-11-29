@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>SHOES</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
@@ -9,7 +9,7 @@
     </head>
     <body>
 
-      <div class="page-header">
+      <div class="page-header col-md-8">
         <h1>Sneaker Spot</h1>
 
       <div class="jumbotron">
@@ -71,17 +71,56 @@
         <div class="btn-space btn-group-lg">
             <button type="submit" id='btn-add' class="btn btn-light">Add Shoe</button>
   
-            <button type="submit" id='btn-remove' class="btn btn-dark">Remove Shoe</button>
+            <button type="submit" id='btn-remove' class="btn btn-dark">Delete Shoe</button>
             
             <button type="submit" id='settings' class="btn btn-light">Settings</button>
             </div>
       </div>
+      <small id= "settingsChange" class="text-muted"></small>
+    </div>
+      <form class="shoes" id="shoes-create">
+          <div class="form-group-lg form-group row">
+              <div class="col-lg-6 col-md-6">
+              <input type="text" class="form-control" name="brand" placeholder="Brand">
+              <input type="text" class="form-control" name="model" placeholder="Model">
+              <input type="text" class="form-control" name="size" placeholder="Size">
+              <input type="text" class="form-control" name="color" placeholder="Color">
 
-      </div>
+              <button type="submit" id='create' class="btn btn-dark">Add</button>
+            </div></div>
+            </form>
+      <form class="shoes" id="shoes-edit">
+          <div class="form-group-lg form-group row">
+              <div class="col-lg-6 col-md-6">
+                  <label for="ex1">edit</label>
+              <input type="text" class="form-control" name="brand" placeholder="Brand">
+              <input type="text" class="form-control" name="model" placeholder="Model">
+              <input type="text" class="form-control" name="size" placeholder="Size">
+              <input type="text" class="form-control" name="color" placeholder="Color">
 
-
-
-
-
+              <button type="submit" id='edit' class="btn btn-dark">Edit</button>
+            </div></div>
+      </form>
+      <form class="shoes" id="shoes-all">
+          <!-- button here that user will click for all -->
+          <h5>all shoes</h5> 
+      </form>
+      <form class="shoes" id="shoes-show">
+          <div class="form-group-lg form-group row">
+              <div class="col-lg-6 col-md-6">
+        <!-- small text saying choose which shoe you want to view -->
+        <input type="text" class="form-control" name="brand" placeholder="Shoe ID">
+        </div></div>
+      </form>
+      <form class="shoes" id="shoes-remove">
+          <div class="form-group-lg form-group row">
+              <div class="col-lg-6 col-md-6">
+        <!-- small text: which shoe do yo u want to remove -->
+          <input type="text" class="form-control" name="brand" placeholder="Shoe ID">
+          <button type="submit" id='remove' class="btn btn-dark">Delete</button>
+          </div></div>
+      </form>
+      
+    
     </body>
 </html>
