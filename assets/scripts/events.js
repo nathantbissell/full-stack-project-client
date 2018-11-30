@@ -49,11 +49,59 @@ api.signOut()
     .catch(ui.signOutFailure)
 }
 
+const onShoeCreate = event => {
+    event.preventDefault()
+    const data = getFormFields(event.target)
+    console.log(data)
+    api.createShoe(data)
+        .then(ui.shoeCreateSuccess)
+        .catch(ui.shoeCreateFailure)
+}
+
+const onShoeEdit = event => {
+    event.preventDefault()
+    const data = getFormFields(event.target)
+    console.log(data)
+    api.editShoe(data)
+        .then(ui.shoeEditSuccess)
+        .catch(ui.shoeEditFailure)
+}
+
+const onShoeGet = event => {
+    event.preventDefault()
+    const data = getFormFields(event.target)
+    api.getShoe(data)
+        .then(ui.shoeGetSuccess)
+        .catch(ui.shoeGetFailure)
+}
+
+const onShoeShow = event => {
+    event.preventDefault()
+    const data = getFormFields(event.target)
+    api.showAllShoes()
+        .then(ui.shoeShowSuccess)
+        .catch(ui.shoeShowFailure)
+}
+
+const onShoeRemove = event => {
+    event.preventDefault()
+    const data = getFormFields(event.target)
+    console.log(data)
+    api.removeShoe(data)
+        .then(ui.shoeRemoveSuccess)
+        .catch(ui.shoeRemoveFailure)
+}
+
 module.exports = {
 onSignUp,
 onSignIn,
 onChangePassword,
 onSignOut,
 loginButton,
-signupButton
+signupButton,
+onShoeCreate,
+onShoeEdit,
+onShoeGet,
+onShoeRemove,
+onShoeShow
 }

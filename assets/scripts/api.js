@@ -39,9 +39,66 @@ return $.ajax({
 })
 }
 
+const createShoe = function (data) {
+return $.ajax({
+    url: baseUrl + '/shoes',
+    method: 'POST',
+    headers: {
+    Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+})
+}
+
+const editShoe = function (data) {
+return $.ajax({
+    url: baseUrl + '/shoes/' + data.id,
+    method: 'PATCH',
+    headers: {
+    Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+})
+}
+
+const getShoe = function (data) {
+return $.ajax({
+    url: baseUrl + '/shoes' + data.id ,
+    method: 'GET',
+    headers: {
+    Authorization: 'Token token=' + store.user.token
+    },
+    data
+})
+}
+
+const showAllShoes = function () {
+return $.ajax({
+    url: baseUrl + '/shoes',
+    method: 'GET',
+    data
+})
+}
+
+const removeShoe = function (data) {
+return $.ajax({
+    url: baseUrl + '/shoes/' + data.id,
+    method: 'DELETE',
+    headers: {
+    Authorization: 'Token token=' + store.user.token
+    },
+    data
+})
+}
+
 module.exports = {
 signUp,
 signIn,
 signOut,
-changePassword
+changePassword,
+createShoe,
+editShoe,
+getShoe,
+showAllShoes,
+removeShoe
 }
