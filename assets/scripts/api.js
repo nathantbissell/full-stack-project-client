@@ -46,7 +46,7 @@ return $.ajax({
     headers: {
     Authorization: 'Token token=' + store.user.token
     },
-    data: data
+    data
 })
 }
 
@@ -57,7 +57,7 @@ return $.ajax({
     headers: {
     Authorization: 'Token token=' + store.user.token
     },
-    data: data
+    data
 })
 }
 

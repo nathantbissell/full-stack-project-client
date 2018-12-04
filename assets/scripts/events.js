@@ -14,6 +14,31 @@ const loginButton = function() {
     $('.sign-up').hide();
 }
 
+const signoutButton = function () {
+    // delete token, hide all menus
+    $('.shoes').hide();
+    }
+
+const addButton = function() {
+    $('.shoes').hide();
+    $('#shoes-create').show();
+}
+
+const showButton = function () {
+    $('.shoes').hide();
+    $('#shoes-show').show();
+}
+
+const showAllShoesButton = function () {
+    $('.shoes').hide();
+    $('#shoes-all').show();
+}
+
+const deleteButton = function () {
+    $('.shoes').hide();
+    $('#shoes-remove').show();
+}
+
 const onSignUp = event => {
 event.preventDefault()
 const data = getFormFields(event.target)
@@ -99,9 +124,15 @@ onChangePassword,
 onSignOut,
 loginButton,
 signupButton,
+signoutButton,
 onShoeCreate,
 onShoeEdit,
 onShoeGet,
 onShoeRemove,
-onShoeShow
+onShoeShow,
+store,
+addButton,
+showButton,
+showAllShoesButton,
+deleteButton
 }

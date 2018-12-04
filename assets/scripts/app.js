@@ -14,4 +14,10 @@ $(() => {
   $('#shoes-all').on('submit', events.onShoeGet)
   $('#shoes-show').on('submit', events.onShoeShow)
   $('#shoes-remove').on('submit', events.onShoeRemove)
+
+  // crud buttons
+  $('#btn-add').on('click', events.addButton)
+  $('#btn-remove').on('click', events.deleteButton)
+  $('#btn-show').on('click', events.showButton)
+  $('#btn-showall').on('click', events.showAllShoesButton)
 })
