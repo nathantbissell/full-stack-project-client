@@ -1,16 +1,21 @@
 @import '~bootstrap/scss/bootstrap';
 html {
-    background-color: black;
+    // background-color: black;
+    // background-size: 1366px 768px;
+    // no-repeat center center fixed
     color: white;
 }
 
 head {
-    background-color: black;
+    // background-color: black;
     color: white;
 }
 body {
-    background-color: black;
+    // background-color: black;
     color: white;
+    background: url('/public/bw.jpg');
+    background-size: cover;
+    background-attachment: scroll;
 }
 
 h2 {
@@ -21,7 +26,8 @@ p {
 }
 
 .jumbotron {
-    background-color: rgb(188, 3, 43);
+    background-color: #b8b7b7;
+    opacity: 0.8;
 }
 
 // .btn-space .btn-group-lg {
@@ -39,9 +45,15 @@ p {
 .log-in {
     display: none;
 }
+.content {
+    color: white;
+}
+#list {
+    color: white;
+}
 
 #second {
-    background-color: rgb(102,153,194)   
+    display: none;  
 }
 
 #shoes-create {

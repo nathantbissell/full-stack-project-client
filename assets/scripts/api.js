@@ -75,8 +75,7 @@ return $.ajax({
 const showAllShoes = function () {
 return $.ajax({
     url: baseUrl + '/shoes',
-    method: 'GET',
-    data
+    method: 'GET'
 })
 }
 

@@ -22,21 +22,29 @@ const signoutButton = function () {
 const addButton = function() {
     $('.shoes').hide();
     $('#shoes-create').show();
+    $('#smallMessage').hide();
 }
 
 const showButton = function () {
     $('.shoes').hide();
     $('#shoes-show').show();
+    $('#smallMessage').html('');
 }
 
 const showAllShoesButton = function () {
     $('.shoes').hide();
     $('#shoes-all').show();
+    $('#smallMessage').html('');
 }
 
 const deleteButton = function () {
     $('.shoes').hide();
     $('#shoes-remove').show();
+}
+
+const settingsClick = function () {
+    // $('.signout').show()
+    // $('.change-password').show()
 }
 
 const onSignUp = event => {
@@ -102,7 +110,7 @@ const onShoeGet = event => {
 
 const onShoeShow = event => {
     event.preventDefault()
-    const data = getFormFields(event.target)
+    // const data = getFormFields(event.target)
     api.showAllShoes()
         .then(ui.shoeShowSuccess)
         .catch(ui.shoeShowFailure)
@@ -134,5 +142,6 @@ store,
 addButton,
 showButton,
 showAllShoesButton,
-deleteButton
+deleteButton, 
+settingsClick
 }

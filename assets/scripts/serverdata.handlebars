@@ -1,0 +1,11 @@
+<div class="container">
+   <h2>Shoes: </h2>
+   <ul id="list">
+   {{#each shoe as |shoe|}}
+     <li>
+       <h4>{{shoe.model}}</h4>
+       By: {{shoe.brand}} color: <em> {{shoe.color}}</em>
+     </li>
+   {{/each}}
+   </ul>
+</div>

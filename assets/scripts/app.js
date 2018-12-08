@@ -20,4 +20,7 @@ $(() => {
   $('#btn-remove').on('click', events.deleteButton)
   $('#btn-show').on('click', events.showButton)
   $('#btn-showall').on('click', events.showAllShoesButton)
+  $('#btn-showall').on('click', events.onShoeShow)
+  // have to create content class / button
+  // $('.content').on('click', 'button', onDelete)
 })

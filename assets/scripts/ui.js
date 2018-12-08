@@ -1,5 +1,6 @@
 'use strict'
 const store = require('./store.js')
+const shoeHandlebar = require('./templates/shoe-list.handlebars')
 
 const signUpSuccess = data => {
     store.user = data.user
@@ -12,9 +13,11 @@ const signUpSuccess = data => {
 
 const signInSuccess = data => {
     store.user = data.user
+    $(".log-in").hide();
     $('#smallMessage').html('Signed in Successfully')
     $('#smallMessage').show()
     $('#signInFormModal').trigger("reset")
+    $('#second').show()
     console.log('signInSuccess ran, the data is ', data)
 }
 
@@ -52,6 +55,7 @@ const signOutFailure = data => {
 
 const signOutSuccess = data => {
     store.user = null
+    $('#second').hide()
     $('#settingsChange').html('Signed Out Successfully.')
 }
 
@@ -83,9 +87,15 @@ const shoeGetFailure = data => {
     $('#settingsChange').html('Unable to list all shoes...technical difficulties')
 }
 
-const shoeShowSuccess = data => {
+const shoeShowSuccess= data => {
     $('#settingsChange').html('Shoe listed')
     $('#shoes-show').trigger("reset")
+    console.log(data.shoes)
+    const showShoesHtml = shoeHandlebar({ shoes: data.shoes })
+    console.log('reached line 95 after shoeshoeshtml')
+    console.log(showShoesHtml)
+    $('.content').html(showShoesHtml)
+    console.log('reached end of function')
 }
 
 const shoeShowFailure = data => {
@@ -94,14 +104,24 @@ const shoeShowFailure = data => {
 }
 
 const shoeRemoveSuccess = data => {
-    $('#settingsChange').html('')
+    $('#settingsChange').html('Removed shoe successfully')
     $('#shoes-remove').trigger("reset")
 }
 
 const shoeRemoveFailure = data => {
-    $('#settingsChange').html('')
+    $('#settingsChange').html('Unable to remove shoe, are you sure it exists?')
     $('#shoes-remove').trigger("reset")
 }
+
+// const getDataSuccess = (data) => {
+//     console.log('getDataSuccess running, here is your data' + data)
+//     const showDataHtml = handlebar({ shoes: data.shoes })
+//     $('.content').html(showDataHtml)
+// }
+
+// const clearData = () => {
+//     $('.content').empty()
+// }
 
 module.exports = {
 signUpSuccess,
@@ -121,5 +141,6 @@ shoeGetFailure,
 shoeShowSuccess,
 shoeShowFailure,
 shoeRemoveSuccess,
-shoeRemoveFailure
+shoeRemoveFailure,
+shoeHandlebar
 }
