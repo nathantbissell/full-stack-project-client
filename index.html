@@ -76,8 +76,25 @@
             <button type="submit" id='settings' class="btn btn-light">Settings</button>
             </div>
       </div>
+      <div class="jumbotron" id="settingsPage">
+        <h2>Settings</h2> 
+          <button type="submit" id='sign-out' class="btn btn-light">Sign Out</button>
+  
+          <button type="submit" id='btn-changepw' class="btn btn-dark">Change Password</button>
+        
+      </div>
+
+      <form class='reset' id='reset' role='form'>
+        <div class="form-group-lg form-group row">
+          <input type="password" class="form-control" name="passwords[old]" placeholder="Old Password">
+          <input type="password" class="form-control" name="passwords[new]" placeholder="New Password">
+        </div>
+          <button type="submit" class="btn btn-dark" id='change-password' role='button'>Submit</button>
+      </form>
       <small id= "settingsChange" class="text-muted"></small>
     
+      
+
       <form class="shoes" id="shoes-create">
           <div class="form-group-lg form-group row">
               <div class="col-lg-6 col-md-6">
@@ -111,6 +128,7 @@
               <div class="col-lg-6 col-md-6">
         <!-- small text saying choose which shoe you want to view -->
         <input type="text" class="form-control" name="id" placeholder="Shoe ID">
+        <button type="submit" id='showOneSubmit' class="btn btn-dark">Submit</button>
         </div></div>
       </form>
       <form class="shoes" id="shoes-remove">
@@ -135,7 +153,6 @@
 
 
 <div id="content" class="content">
-  <ul id="list"></ul>
 </div>
 </body>
 </html>

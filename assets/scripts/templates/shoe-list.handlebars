@@ -1,10 +1,10 @@
-<div class="container">
+<div class="list-group">
    <h2>Shoes: </h2>
-   <ul id="shoe">
-   {{#each shoe as |shoe|}}
-     <li>
-       <h4>{{shoe.model}}</h4>
-       By: {{shoe.brand}} color: <em> {{shoe.color}}</em>
+   <ul class="list-group" id="shoe">
+   {{#each shoes}}
+     <li class="list-group-item list-group-item-dark">
+       <h4>{{this.model}}</h4>
+       Brand: {{this.brand}} Color: <em> {{this.color}}</em>
      </li>
    {{/each}}
    </ul>

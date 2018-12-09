@@ -30,9 +30,17 @@ p {
     opacity: 0.8;
 }
 
-// .btn-space .btn-group-lg {
-//     margin-right: 50px;
-// }
+.reset {
+    display: none;
+}
+
+#pwChangeFields {
+    display: none;
+}
+
+#settingsPage {
+    display: none;
+}
 
 .page-header {
     text-align: center;

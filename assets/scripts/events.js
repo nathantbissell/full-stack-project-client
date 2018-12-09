@@ -13,16 +13,25 @@ const loginButton = function() {
     $(".log-in").show();
     $('.sign-up').hide();
 }
+const showSettingsPage = function () {
+    $('#settingsPage').show()
+}
+
+const reset = function () {
+    $('.reset').show();
+    $("#reset").show();
+}
 
 const signoutButton = function () {
     // delete token, hide all menus
     $('.shoes').hide();
-    }
+}
 
 const addButton = function() {
     $('.shoes').hide();
     $('#shoes-create').show();
-    $('#smallMessage').hide();
+    $('#sfallMessage').hide();
+    // ???
 }
 
 const showButton = function () {
@@ -40,11 +49,6 @@ const showAllShoesButton = function () {
 const deleteButton = function () {
     $('.shoes').hide();
     $('#shoes-remove').show();
-}
-
-const settingsClick = function () {
-    // $('.signout').show()
-    // $('.change-password').show()
 }
 
 const onSignUp = event => {
@@ -77,6 +81,7 @@ api.changePassword(data)
 
 const onSignOut = event => {
 event.preventDefault()
+$('#settingsPage').hide()
 api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
@@ -142,6 +147,7 @@ store,
 addButton,
 showButton,
 showAllShoesButton,
-deleteButton, 
-settingsClick
+deleteButton,
+showSettingsPage,
+reset
 }

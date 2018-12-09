@@ -39,14 +39,16 @@ const signInFailure = data => {
     console.log('signInFailure ran, the data is ', data)
 }
 
-const changePasswordSuccess = data => {
+const changePasswordSuccess = function () {
+    // we want to kick out to the add shoe delete shoe screen
+    // settings.hide, etc
     $('#settingsChange').html('Password Changed Successfully')
-    $().trigger("reset")
+    $('.reset').trigger("reset")
 }
 
-const changePasswordFailure = data => {
+const changePasswordFailure = function () {
     $('#settingsChange').html('Password Change Failed. Please make sure old and new password are different.')
-    $().trigger("reset")
+    $('.reset').trigger("reset")
 }
 
 const signOutFailure = data => {
@@ -90,12 +92,8 @@ const shoeGetFailure = data => {
 const shoeShowSuccess= data => {
     $('#settingsChange').html('Shoe listed')
     $('#shoes-show').trigger("reset")
-    console.log(data.shoes)
     const showShoesHtml = shoeHandlebar({ shoes: data.shoes })
-    console.log('reached line 95 after shoeshoeshtml')
-    console.log(showShoesHtml)
     $('.content').html(showShoesHtml)
-    console.log('reached end of function')
 }
 
 const shoeShowFailure = data => {
