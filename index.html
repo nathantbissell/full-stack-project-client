@@ -9,17 +9,16 @@
     </head>
     <body>
 
-      <div class="page-header col-md-8">
+      <div class="page-header col-lg-6">
         <h1>Sneaker Spot</h1>
 
       <div class="jumbotron vertical-center">
       
         <!-- enlarges fonts, put everything inside of a grey box w/rounded corners
         if jumbo used outside of container will fill the total width of the screen. -->
-          <p>Forget your sneaker closet at home? No worries! With Sneaker Spot you can show off
-            your newest (or vintage) sneakers via this web interface! You can add sneakers, create a wishlist, 
-            or even check to see if your local retailers have them available!
-          </p>
+          <p><b>Forget your sneaker closet at home? No worries! With Sneaker Spot you can show off
+            your newest (or vintage) sneakers! You can add sneakers from your closet, remove sneakers, or view all shoes in the closet!
+          </b></p>
       
       <div class="btn-space btn-group-lg">
           <button type="submit" id='btn-login' class="btn btn-dark">Log In</button>
@@ -91,7 +90,6 @@
         </div>
           <button type="submit" class="btn btn-dark" id='change-password' role='button'>Submit</button>
       </form>
-      <small id= "settingsChange" class="text-muted"></small>
     
       
 
@@ -119,10 +117,6 @@
               <button type="submit" id='edit' class="btn btn-dark">Edit</button>
             </div></div>
       </form>
-      <form class="shoes" id="shoes-all">
-          <!-- button here that user will click for all -->
-          <h5>all shoes</h5> 
-      </form>
       <form class="shoes" id="shoes-show">
           <div class="form-group-lg form-group row">
               <div class="col-lg-6 col-md-6">
@@ -130,6 +124,10 @@
         <input type="text" class="form-control" name="id" placeholder="Shoe ID">
         <button type="submit" id='showOneSubmit' class="btn btn-dark">Submit</button>
         </div></div>
+      </form>
+      <form class="shoes" id="shoes-all">
+        <div id="content" class="content">
+        </div>
       </form>
       <form class="shoes" id="shoes-remove">
           <div class="form-group-lg form-group row">
@@ -140,7 +138,7 @@
           <button type="submit" id='remove' class="btn btn-dark">Delete</button>
           </div></div>
       </form>
-    </div>
+    
     
     
 
@@ -150,9 +148,8 @@
 <button type="submit" id='btn-show' class="btn btn-light">Show Shoe</button>
 <button type="submit" id='btn-showall' class="btn btn-light">Show Closet</button>
 
-
-
-<div id="content" class="content">
 </div>
+
+
 </body>
 </html>

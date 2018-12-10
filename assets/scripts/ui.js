@@ -42,72 +42,73 @@ const signInFailure = data => {
 const changePasswordSuccess = function () {
     // we want to kick out to the add shoe delete shoe screen
     // settings.hide, etc
-    $('#settingsChange').html('Password Changed Successfully')
+    $('#smallMessage').html('Password Changed Successfully')
     $('.reset').trigger("reset")
 }
 
 const changePasswordFailure = function () {
-    $('#settingsChange').html('Password Change Failed. Please make sure old and new password are different.')
+    $('#smallMessage').html('Password Change Failed. Please make sure old and new password are different.')
     $('.reset').trigger("reset")
 }
 
 const signOutFailure = data => {
-    $('#settingsChange').html('Unable to Sign Out, sorry we are experiencing technical difficulties.')
+    $('#smallMessage').html('Unable to Sign Out, sorry we are experiencing technical difficulties.')
 } 
 
 const signOutSuccess = data => {
     store.user = null
     $('#second').hide()
-    $('#settingsChange').html('Signed Out Successfully.')
+    $('#smallMessage').html('Signed Out Successfully.')
+    $('#smallMessage').html('')
 }
 
 const shoeCreateSuccess = data => {
-    $('#settingsChange').html('Created shoe successfully')
+    $('#smallMessage').html('Created shoe successfully')
     $('#shoes-create').trigger("reset")
 }
 
 const shoeCreateFailure = data => {
-    $('#settingsChange').html('Failed to create shoe. Insufficient data')
+    $('#smallMessage').html('Failed to create shoe. Insufficient data')
     $('#shoes-create').trigger("reset")
 }
 
 const shoeEditSuccess = data => {
-    $('#settingsChange').html('Altered shoe successfully')
+    $('#smallMessage').html('Altered shoe successfully')
     $('#shoes-edit').trigger("reset")
 }
 
 const shoeEditFailure = data => {
-    $('#settingsChange').html('Unable to alter shoe. Please check your parameters')
+    $('#smallMessage').html('Unable to alter shoe. Please check your parameters')
     $('#shoes-edit').trigger("reset")
 }
 
 const shoeGetSuccess = data => {
-    $('#settingsChange').html('Listing all shoes')
+    $('#smallMessage').html('Listing all shoes')
 }
 
 const shoeGetFailure = data => {
-    $('#settingsChange').html('Unable to list all shoes...technical difficulties')
+    $('#smallMessage').html('Unable to list all shoes...technical difficulties')
 }
 
 const shoeShowSuccess= data => {
-    $('#settingsChange').html('Shoe listed')
+    $('#smallMessage').html('Shoe listed')
     $('#shoes-show').trigger("reset")
     const showShoesHtml = shoeHandlebar({ shoes: data.shoes })
     $('.content').html(showShoesHtml)
 }
 
 const shoeShowFailure = data => {
-    $('#settingsChange').html('Unable to find shoe...')
+    $('#smallMessage').html('Unable to find shoe...')
     $('#shoes-show').trigger("reset")
 }
 
 const shoeRemoveSuccess = data => {
-    $('#settingsChange').html('Removed shoe successfully')
+    $('#smallMessage').html('Removed shoe successfully')
     $('#shoes-remove').trigger("reset")
 }
 
 const shoeRemoveFailure = data => {
-    $('#settingsChange').html('Unable to remove shoe, are you sure it exists?')
+    $('#smallMessage').html('Unable to remove shoe, are you sure it exists?')
     $('#shoes-remove').trigger("reset")
 }
 
