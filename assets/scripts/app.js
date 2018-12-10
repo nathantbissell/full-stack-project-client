@@ -21,8 +21,8 @@ $(() => {
   // crud
   $('#shoes-create').on('submit', events.onShoeCreate)
   $('#shoes-edit').on('submit', events.onShoeEdit)
-  $('#shoes-all').on('submit', events.onShoeGet)
-  $('#shoes-show').on('submit', events.onShoeShow)
+  // show one function
+  $('#shoes-show').on('submit', events.onShoeGet)
   // needs work going off showallshoes function -- need to separate the two
   $('#shoes-remove').on('submit', events.onShoeRemove)
 
@@ -32,6 +32,4 @@ $(() => {
   $('#btn-show').on('click', events.showButton)
   $('#btn-showall').on('click', events.showAllShoesButton)
   $('#btn-showall').on('click', events.onShoeShow)
-  // have to create content class / button
-  // $('.content').on('click', 'button', onDelete)
 })

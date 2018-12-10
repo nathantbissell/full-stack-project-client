@@ -7,8 +7,6 @@ const signUpSuccess = data => {
     $('#smallMessage').html('Signed up Successfully')
     $('#smallMessage').show()
     $('#signUpFormModal').trigger("reset")
-    console.log('signUpSuccess ran: the data is ', data)
-
 }
 
 const signInSuccess = data => {
@@ -18,26 +16,20 @@ const signInSuccess = data => {
     $('#smallMessage').show()
     $('#signInFormModal').trigger("reset")
     $('#second').show()
-    console.log('signInSuccess ran, the data is ', data)
 }
 
 const signUpFailure = data => {
     store.user = data.user
-    console.log('store.user = ', store.user)
     $('#smallMessage').html('Sign Up Failure')
     $('#smallMessage').show()
     $('#signUpFormModal').trigger("reset")
-    console.log('signUpFailure ran, the data is ', data)
 }
 
 const signInFailure = data => {
     store.user = data.user
-    console.log('store.user = ', store.user)
     $('#smallMessage').html('Sign In Failure')
     $('#smallMessage').show()
-    $('#signInFormModal').trigger("reset")
-    console.log('signInFailure ran, the data is ', data)
-}
+    $('#signInFormModal').trigger("reset")}
 
 const changePasswordSuccess = function () {
     // we want to kick out to the add shoe delete shoe screen
@@ -59,7 +51,6 @@ const signOutSuccess = data => {
     store.user = null
     $('#second').hide()
     $('#smallMessage').html('Signed Out Successfully.')
-    $('#smallMessage').html('')
 }
 
 const shoeCreateSuccess = data => {
@@ -83,11 +74,17 @@ const shoeEditFailure = data => {
 }
 
 const shoeGetSuccess = data => {
-    $('#smallMessage').html('Listing all shoes')
+    // showing one shoe
+    $('#smallMessage').html('Listing your shoe')
+    const showShoesHtml = shoeHandlebar({ shoes: data.shoes })
+    // console.log(showShoesHtml)
+    // // left this console log cause I wanted to be able
+    // // to display one shoe, however was unable to get working before deadline.
+    $('.content').html(showShoesHtml)
 }
 
 const shoeGetFailure = data => {
-    $('#smallMessage').html('Unable to list all shoes...technical difficulties')
+    $('#smallMessage').html('Unable to list your shoe...technical difficulties')
 }
 
 const shoeShowSuccess= data => {
@@ -113,7 +110,6 @@ const shoeRemoveFailure = data => {
 }
 
 // const getDataSuccess = (data) => {
-//     console.log('getDataSuccess running, here is your data' + data)
 //     const showDataHtml = handlebar({ shoes: data.shoes })
 //     $('.content').html(showDataHtml)
 // }

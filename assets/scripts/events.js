@@ -4,7 +4,6 @@ const ui = require('./ui.js')
 const store = require('./store.js')
 
 const signupButton = function () {
-    console.log('in signupButton')
     $('.sign-up').show();
     $(".log-in").hide();
 }
@@ -23,14 +22,13 @@ const reset = function () {
 }
 
 const signoutButton = function () {
-    // delete token, hide all menus
     $('.shoes').hide();
 }
 
 const addButton = function() {
     $('.shoes').hide();
     $('#shoes-create').show();
-    $('#sfallMessage').hide();
+    $('#smallMessage').hide();
     // ???
 }
 
@@ -48,13 +46,13 @@ const showAllShoesButton = function () {
 
 const deleteButton = function () {
     $('.shoes').hide();
+    $('#smallMessage').html('')
     $('#shoes-remove').show();
 }
 
 const onSignUp = event => {
 event.preventDefault()
 const data = getFormFields(event.target)
-console.log(data)
 api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
@@ -62,9 +60,7 @@ api.signUp(data)
 
 const onSignIn = event => {
 event.preventDefault()
-console.log("getting into onSignIn")
 const data = getFormFields(event.target)
-console.log(data)
 api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
@@ -90,7 +86,6 @@ api.signOut()
 const onShoeCreate = event => {
     event.preventDefault()
     const data = getFormFields(event.target)
-    console.log(data)
     api.createShoe(data)
         .then(ui.shoeCreateSuccess)
         .catch(ui.shoeCreateFailure)
@@ -99,7 +94,6 @@ const onShoeCreate = event => {
 const onShoeEdit = event => {
     event.preventDefault()
     const data = getFormFields(event.target)
-    console.log(data)
     api.editShoe(data)
         .then(ui.shoeEditSuccess)
         .catch(ui.shoeEditFailure)
@@ -115,7 +109,6 @@ const onShoeGet = event => {
 
 const onShoeShow = event => {
     event.preventDefault()
-    // const data = getFormFields(event.target)
     api.showAllShoes()
         .then(ui.shoeShowSuccess)
         .catch(ui.shoeShowFailure)
@@ -124,7 +117,6 @@ const onShoeShow = event => {
 const onShoeRemove = event => {
     event.preventDefault()
     const data = getFormFields(event.target)
-    console.log(data)
     api.removeShoe(data)
         .then(ui.shoeRemoveSuccess)
         .catch(ui.shoeRemoveFailure)

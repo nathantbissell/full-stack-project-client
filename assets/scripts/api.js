@@ -63,7 +63,7 @@ return $.ajax({
 
 const getShoe = function (data) {
 return $.ajax({
-    url: baseUrl + '/shoes' + data.id ,
+    url: baseUrl + '/shoes/' + data.shoe.id ,
     method: 'GET',
     headers: {
     Authorization: 'Token token=' + store.user.token
