@@ -1,72 +1,60 @@
 @import '~bootstrap/scss/bootstrap';
 html {
-    color: white;
+  color: white;
 }
 
 head {
-    color: white;
+  color: white;
 }
 body {
-    color: white;
-    background: url('public/bw2.png');
-    background-size: cover;
-    background-attachment: scroll;
+  color: white;
+  background: url('public/bw2.png');
+  background-size: cover;
+  background-attachment: scroll;
 }
 
 h2 {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 p {
-    color: #000;
+  color: #000;
 }
 
 .jumbotron {
-    background-color: #c6c8ca;
-    opacity: 0.8;
+  background-color: #c6c8ca;
+  opacity: 0.8;
 }
 
 .reset {
-    display: none;
-}
-
-#settingsPage {
-    display: none;
+  display: none;
 }
 
 .page-header {
-    text-align: center;
-    margin: 10px;
-    padding: 20px;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
 }
 .sign-up {
-    display: none;
+  display: none;
 }
 .log-in {
-    display: none;
+  display: none;
 }
 .content {
-    color: white;
+  color: white;
 }
 #list {
-    color: white;
+  color: white;
 }
 
-#second {
-    display: none;  
-}
-
+#settingsPage,
+#second,
+#btn-show,
+#btn-showall,
+#shoes-edit,
+#shoes-remove,
+#shoes-all,
+#shoes-show,
 #shoes-create {
-    display: none;
-}
-#shoes-show {
-    display: none;
-}
-#shoes-all {
-    display: none;
-}
-#shoes-remove {
-    display: none;
-}
-#shoes-edit {
-    display: none;
+  display: none;
 }
