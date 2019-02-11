@@ -29,6 +29,10 @@ p {
   display: none;
 }
 
+.form-control {
+  padding: 10px;
+}
+
 .page-header {
   text-align: center;
   margin: 10px;
@@ -49,8 +53,6 @@ p {
 
 #settingsPage,
 #second,
-#btn-show,
-#btn-showall,
 #shoes-edit,
 #shoes-remove,
 #shoes-all,
