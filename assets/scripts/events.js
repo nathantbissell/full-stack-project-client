@@ -13,6 +13,7 @@ const loginButton = function() {
   $('.sign-up').hide()
 }
 const showSettingsPage = function() {
+  $('.shoes, #smallMessage, #shoes-show, #shoes-all, #shoes-remove').hide()
   $('#settingsPage').show()
 }
 
@@ -25,18 +26,18 @@ const signoutButton = function() {
 }
 
 const addButton = function() {
-  $('#smallMessage, #settingsPage').hide()
+  $('#smallMessage, #settingsPage, #shoes-show, #shoes-all').hide()
   $('#shoes-create').show()
 }
 
 const showButton = function() {
-  $('.shoes').hide()
+  $('.shoes, #settingsPage').hide()
   $('#shoes-show').show()
   $('#smallMessage').html('')
 }
 
 const showAllShoesButton = function() {
-  $('.shoes').hide()
+  $('.shoes, #settingsPage').hide()
   $('#shoes-all').show()
   $('#smallMessage').html('')
 }

@@ -9,7 +9,7 @@ head {
 body {
   color: white;
   background: url('public/bw2.png');
-  background-size: cover;
+  background-position: fixed;
   background-attachment: scroll;
 }
 
@@ -30,7 +30,7 @@ p {
 }
 
 .form-control {
-  padding: 10px;
+  margin: 20px;
 }
 
 .page-header {
@@ -49,6 +49,15 @@ p {
 }
 #list {
   color: white;
+}
+
+#create {
+  height: 50px;
+  width: 100px;
+}
+
+.btn-space .btn-group-lg {
+  padding: 5px;
 }
 
 #settingsPage,

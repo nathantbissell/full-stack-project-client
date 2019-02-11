@@ -70,11 +70,12 @@
   
             <button type="submit" id='btn-remove' class="btn btn-dark">Delete Shoe</button>
             
-            <button type="submit" id='settings' class="btn btn-light">Settings</button>
-
-            <button type="submit" id='btn-show' class="btn btn-light">Show Shoe</button>
-            <button type="submit" id='btn-showall' class="btn btn-light">Show Closet</button>
+            <button type="submit" id='settings' class="btn btn-danger">Settings</button>
+            <div class='btn-space btn-group-lg'>
+              <button type="submit" id='btn-show' class="btn btn-light">Show Shoe</button>
+              <button type="submit" id='btn-showall' class="btn btn-light">Show Closet</button>
             </div>
+          </div>
       </div>
       <div class="jumbotron" id="settingsPage">
         <h2>Settings</h2> 
@@ -95,7 +96,7 @@
       
 
       <form class="shoes" id="shoes-create">
-          <div class="form-group-lg form-group row">
+          <div class="form-group-lg form-group row" id='addShoeGroup'>
               <div class="col-lg-6 col-md-6">
               <input type="text" class="form-control" name="shoe[brand]" placeholder="Brand">
               <input type="text" class="form-control" name="shoe[model]" placeholder="Model">
@@ -106,7 +107,7 @@
             </div></div>
             </form>
       <form class="shoes" id="shoes-edit">
-          <div class="form-group-lg form-group row">
+          <div class="form-group-lg form-group row" id='addShoeGroup'>
               <div class="col-lg-6 col-md-6">
                   <label for="ex1">edit</label>
               <input type="text" class="form-control" name="shoe[id]" placeholder="ID">
