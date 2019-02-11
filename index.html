@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>SHOES</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+      <div class="page-header col-lg-6">
+        <h1>Sneaker Spot</h1>
+
+      <div class="jumbotron vertical-center home">
+      
+        <!-- enlarges fonts, put everything inside of a grey box w/rounded corners
+        if jumbo used outside of container will fill the total width of the screen. -->
+          <p><b>Forget your sneaker closet at home? No worries! With Sneaker Spot you can show off
+            your newest (or vintage) sneakers! You can add sneakers from your closet, remove sneakers, or view all shoes in the closet!
+          </b></p>
+      
+      <div class="btn-space btn-group-lg">
+          <button type="submit" id='btn-login' class="btn btn-dark">Log In</button>
+
+          <button type="submit" id='btn-signup' class="btn btn-light">Sign Up</button>
+        </div>
+        </div>
+          <form class="sign-up" id="signUpFormModal" role="form">
+              <div class="form-group">
+                  <h2>Sign Up</h2>
+                
+                <label for="input">Email address</label>
+                <input type="text" class="form-control" name="credentials[email]" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">By creating an account, you automatically accept our terms and conditions</small>
+              </div>
+              
+              <div class="form-group">
+                <label for="input">Password</label>
+                <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+              </div>
+              
+              <div class="form-group">
+                <label for="input">Confirm Password</label>
+                <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-danger btn-lg" role="button">Submit</button>
+          </form>
+
+          <form class="log-in" id="signInFormModal" role="form">
+              <div class="form-group">
+              <h2>Sign In</h2>
+                <label for="input">Email address</label>
+                <input type="text" class="form-control" name="credentials[email]" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">Please Sign In</small>
+              </div>
+              <div class="form-group">
+                <label for="input">Password</label>
+                <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-danger btn-lg" role="button">Submit</button>
+          </form>
+          <small id= "smallMessage" class="text-muted"></small>
+      
+      
+      <div id= "second" class="jumbotron">
+        <h2>Welcome! What would you like to do today?</h2>
+        <div class="btn-space btn-group-lg">
+            <button type="submit" id='btn-add' class="btn btn-light">Add Shoe</button>
+  
+            <button type="submit" id='btn-remove' class="btn btn-dark">Delete Shoe</button>
+            
+            <button type="submit" id='settings' class="btn btn-danger">Settings</button>
+            <div class='btn-space btn-group-lg'>
+              <button type="submit" id='btn-show' class="btn btn-light">Show Shoe</button>
+              <button type="submit" id='btn-showall' class="btn btn-light">Show Closet</button>
+            </div>
+          </div>
+      </div>
+      <div class="jumbotron" id="settingsPage">
+        <h2>Settings</h2> 
+          <button type="submit" id='sign-out' class="btn btn-light">Sign Out</button>
+  
+          <button type="submit" id='btn-changepw' class="btn btn-dark">Change Password</button>
+        
+      </div>
+
+      <form class='reset' id='reset' role='form'>
+        <div class="form-group-lg form-group row">
+          <input type="password" class="form-control" name="passwords[old]" placeholder="Old Password">
+          <input type="password" class="form-control" name="passwords[new]" placeholder="New Password">
+        </div>
+          <button type="submit" class="btn btn-dark" id='change-password' role='button'>Submit</button>
+      </form>
+    
+      
+
+      <form class="shoes" id="shoes-create">
+          <div class="form-group-lg form-group row" id='addShoeGroup'>
+              <div class="col-lg-6 col-md-6">
+              <input type="text" class="form-control" name="shoe[brand]" placeholder="Brand">
+              <input type="text" class="form-control" name="shoe[model]" placeholder="Model">
+              <input type="text" class="form-control" name="shoe[size]" placeholder="Size">
+              <input type="text" class="form-control" name="shoe[color]" placeholder="Color">
+
+              <button type="submit" id='create' class="btn btn-dark">Add</button>
+            </div></div>
+            </form>
+      <form class="shoes" id="shoes-edit">
+          <div class="form-group-lg form-group row" id='addShoeGroup'>
+              <div class="col-lg-6 col-md-6">
+                  <label for="ex1">edit</label>
+              <input type="text" class="form-control" name="shoe[id]" placeholder="ID">
+              <input type="text" class="form-control" name="shoe[brand]" placeholder="Brand">
+              <input type="text" class="form-control" name="shoe[model]" placeholder="Model">
+              <input type="text" class="form-control" name="shoe[size]" placeholder="Size">
+              <input type="text" class="form-control" name="shoe[color]" placeholder="Color">
+
+              <button type="submit" id='edit' class="btn btn-dark">Edit</button>
+            </div></div>
+      </form>
+      <form class="shoes" id="shoes-show">
+          <div class="form-group-lg form-group row">
+              <div class="col-lg-6 col-md-6">
+        <!-- small text saying choose which shoe you want to view -->
+        <input type="text" class="form-control" name="shoe[id]" placeholder="Shoe ID">
+        <button type="submit" id='showOneSubmit' class="btn btn-dark">Submit</button>
+        </div></div>
+      </form>
+      <form class="shoes" id="shoes-all">
+        <div id="content" class="content">
+        </div>
+      </form>
+      <form class="shoes" id="shoes-remove">
+          <div class="form-group-lg form-group row">
+              <div class="col-lg-6 col-md-6">
+        <!-- small text: which shoe do yo u want to remove -->
+        <small>Choose Shoe to Remove</small>
+          <input type="text" class="form-control" name="id" placeholder="Shoe ID">
+          <button type="submit" id='remove' class="btn btn-dark">Delete</button>
+          </div></div>
+      </form>
+</div>
+</body>
+</html>
